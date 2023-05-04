@@ -100,7 +100,7 @@
         
             <h2>Formulario para unirte al mejor club del mundo</h2>
 
-        <main class="cuestionario">
+      <!--<main class="cuestionario">
             
     
             <div>
@@ -116,7 +116,7 @@
             <input type="number" id="edad"></div>
             
 <div>
-    <select name="" id="">
+    <select name="" id="tipoSuscripcion">
         <option disabled>Elige una opcion</option>
         <option value="">Quiero ser socio</option>
         <option value="">Solo afiliación</option>
@@ -130,9 +130,22 @@
             
 
        <div class="botones">
-        <button class="boton-enviar" type="submit">Enviar</button>
+        <button class="boton-enviar" type="button" onclick="unirse()">Enviar</button>
         <button class="boton-limpiar" type="reset">Limpiar formulario</button>
-      </div>
+      </div>-->
+
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+      
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo">
+      
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+      
+        <button type="button" onclick="guardarDatos()">Guardar datos</button>
+      </form>
 
      
     
