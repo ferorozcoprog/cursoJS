@@ -1,27 +1,17 @@
-/*function unirse() {
-  const nombre = document.getElementsById("nombre").value;
-  const fecha = document.getElementById("date").value;
-  const edad = document.getElementById("edad").value;
-  const suscripcion = document.getElementById("tipoSuscripcion").value;
-  const pais = document.getElementById("pais").value;
 
-  localStorage.setItem("nombre", nombre);
-  localStorage.setItem("date", fecha);
-  localStorage.setItem("edad", edad);
-  localStorage.setItem("tipoSuscripcion", suscripcion);
-  localStorage.setItem("pais", pais);
+function guardarInformacion() {
+  const nombre = document.getElementById("validationTooltip01").value;
+  const correo = document.getElementById("validationTooltip05").value;
+  const fechaNacimiento = document.getElementById("validationTooltip02").value;
+  const tipoSuscripcion = document.getElementById("validationTooltip04").value;
+  const pais = document.getElementById("validationTooltip03").value;
+  
 
-  alert("gracias por unirte");
-}*/
-
-function guardarDatos() {
-  const nombre = document.getElementById("nombre").value;
-  const correo = document.getElementById("correo").value;
-  const telefono = document.getElementById("telefono").value;
-
-  localStorage.setItem("nombre", nombre);
-  localStorage.setItem("correo", correo);
-  localStorage.setItem("telefono", telefono);
+  localStorage.setItem("validationTooltip01", nombre);
+  localStorage.setItem("validationTooltip05", correo);
+  localStorage.setItem("validationTooltip02", fechaNacimiento);
+  localStorage.setItem("validationTooltip04", tipoSuscripcion);
+  localStorage.setItem("validationTooltip03", pais);
 
   alert("Datos guardados correctamente");
 }

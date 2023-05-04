@@ -100,54 +100,57 @@
         
             <h2>Formulario para unirte al mejor club del mundo</h2>
 
-      <!--<main class="cuestionario">
+            <main class="cuestionario">
             
     
-            <div>
-                <label for="nombre">Nombre y apellido</label>
-                <input type="text" id="nombre" placeholder="nombre completo">  
-            </div>
-            
-           <div>
-            <label for="date">Fecha de nacimiento</label>
-            <input type="date" name="" id="date">
-           </div>
-           <div><label for="edad">Edad</label>
-            <input type="number" id="edad"></div>
-            
-<div>
-    <select name="" id="tipoSuscripcion">
-        <option disabled>Elige una opcion</option>
-        <option value="">Quiero ser socio</option>
+           
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip01" class="form-label"> Nombre completo</label>
+          <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre y apellido" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip02" class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="validationTooltip02" placeholder="" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">País</label>
+          <input type="text" class="form-control" id="validationTooltip03" required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip04" class="form-label">Tipo de Suscripción</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Elije una opción</option>
+            <option value="">Quiero ser socio</option>
         <option value="">Solo afiliación</option>
         <option value="">Suscripción mensual</option>
-    </select>
-</div>
-      <div>  <label for="pais">País</label>
-        <input type="text" id="pais" placeholder="País de origen">
-
-      </div>    
-            
-
-       <div class="botones">
-        <button class="boton-enviar" type="button" onclick="unirse()">Enviar</button>
-        <button class="boton-limpiar" type="reset">Limpiar formulario</button>
-      </div>-->
-
-      <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-      
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo">
-      
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono">
-      
-        <button type="button" onclick="guardarDatos()">Guardar datos</button>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip05" class="form-label" >Correo electrónico</label>
+          <input type="email" class="form-control" placeholder="hola@correo.com" id="validationTooltip05" required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="button" onclick="guardarInformacion()">Enviar datos</button>
+          <button class="btn btn-primary" type="reset" >Limpiar</button>
+        </div>
       </form>
-
-     
     
     </main>
 
