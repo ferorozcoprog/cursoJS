@@ -54,7 +54,7 @@ btnTercera.addEventListener("click", function() {
 function actualizarPrecio(indiceCamiseta) {
   const camiseta = camisetas[indiceCamiseta];
   seccionPrecio.innerHTML = `
-    <p>Precio: $${camiseta.precio}</p>
-  `;
+  <h2>${camiseta.tipo}</h2>
+  <p>Precio: $${camiseta.precio}</p>
+`;
 }
-
