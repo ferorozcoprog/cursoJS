@@ -21,7 +21,7 @@ const buscarItems = async () => {
 
 // mostrar los items
 const verItems = (data) => {
-  const cardContainer = document.getElementById("cardContainer"); // Agrega esta línea para obtener la referencia al contenedor de tarjetas
+  const cardContainer = document.getElementById("cardContainer");
   data.forEach((e) => {
     const { tipo, img, descripcion, precio, stock } = e;
     let card = document.createElement("div");
