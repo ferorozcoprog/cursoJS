@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Kanit:ital@0;1&family=Montserrat&family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- main.css --> 
     <link rel="stylesheet" href="../css/styles.css">
     <title>Únete-Real Madrid Fan Page</title>
 </head>
@@ -59,19 +63,17 @@
       <p>Productos auténticos diseñados por Adidas con materiales 100% reciclados y tecnología de ventilación HEAT.RDY. Siente la emoción de entrenar con la vestimenta del mejor club del mundo. </p>
     </section>
     <section class="tienda">
-      <div id='cardContainer' class='cardContainer'>
-        <!--espacio para camisetas-->
-      </div>
+      <div id='cardContainer' class='cardContainer'></div>
       <br>
     </section>
     <section class="tienda">
-      <button id="showCart">Ver Carrito</button>
+      <button id="mostrarCarrito">Ver Carrito</button>
       <br>
-      <div id="cartContainer" class='cartContainer'>
-        <!--espacio para carrito-->
-      </div>
+      <div id="cartContainer" class='cartContainer'></div>
       <br>
-      <button id="checkOut">Confirmar</button>
+      <button id="confirmar">Confirmar</button>
+      <br>
+      <button id="vaciarCarrito">Vaciar Carrito</button>
       <br>
     </section>
     <section class="cuestionario">
@@ -123,7 +125,7 @@
         </div>
       </form>
     </section>
-  </main>
+  </main> 
   <footer class="footer-general">
     <h2 class="footer__h2">Donde encontrarnos</h2>
     <div class="footer__1">

@@ -1,43 +1,52 @@
-class Item {
-  constructor(tipo, descripcion, precio, stock, img) {
-    this.tipo = tipo;
-    this.descripcion = descripcion;
-    this.precio = precio;
-    this.stock= stock;
-    this.img = img;
-  }
+const items = [
+  {
+    "tipo": "Camiseta de la primera equipación",
+    "descripcion": "Esta camiseta oficial de la primera equipación del Real Madrid luce un look atemporal con detalles en morado claro y el escudo del club repetido sobre un fondo blanco.",
+    "precio": 120,
+    "stock":4,
+    "img":"../img/tienda-1.webp"
+  },
+  {
+    "tipo": "Camiseta de la segunda equipación",
+    "descripcion": "Esta camiseta adidas de la segunda equipación del Real Madrid luce una nueva combinación de colores. Material 100% reciclado",
+    "precio": 100,
+    "stock":7,
+    "img":"../img/tienda-2.webp"
+  },
+  {
+    "tipo": "Camiseta de la tercera equipación",
+    "descripcion": "Esta camiseta oficial adidas del Real Madrid se inspira en la nueva estética del Bernabéu",
+    "precio": 85,
+    "stock":12,
+    "img":"../img/tienda-3.webp"
+  },
+  ];
+
+// funcion traer los items del array que devuelve una promesa
+const getItems = () => {
+  return new Promise((resolve, reject)=>{
+      if(items.length > 0){
+          setTimeout(()=> {
+              resolve(items);
+          },1500)
+      } else {
+          reject (new Error("No hay items para mostrar"))
+      }
+  })
 }
 
-// buscar los items con fetch en ubicación relativa
-const buscarItems = async () => {
-    const respuesta = await fetch("../items.json");
-    const data = await respuesta.json();
-    localStorage.setItem("tienda", JSON.stringify(data));
-    console.log("El catálogo se ha cargado en el almacenamiento local");
-    console.log(data);
+// traer items de json con funcion asincronica
+const API = "../items.json"
+const getData = async () => {
+    const response = await fetch(API);
+    const data = await response.json();
     return data;
-};
+}
 
-// mostrar los items
-const verItems = (data) => {
-  data.forEach((e) => {
-    const { tipo, img, descripcion, precio, stock } = e;
-    let card = document.createElement("div");
-    card.setAttribute("class", "card_1");
-    card.innerHTML = `
-      <img alt=${tipo} src='${img}'/>
-      <h4>${tipo}</h4>
-      <p>${descripcion}</p>
-      <h3>$${precio}</h3>
-      <h3 class=${stock ? "green" : "red"}> Stock:${stock || " No hay Stock"}</h3> 
-      <button class="addbtn" id="${tipo}"><a class="whiteLink">AGREGAR</a></button>
-    `;
-    cardContainer.appendChild(card);
-  });
-};
-
-
-// Llamada a la función buscarItems y verItems
-buscarItems().then((data) => {
-  verItems(data);
-});
+// traer items de rick & morti api
+const API2 = "https://rickandmortyapi.com/api/character"
+const getData2 = async () => {
+  const response = await fetch(API2);
+  const data = await response.json();
+  return data.results;
+}
